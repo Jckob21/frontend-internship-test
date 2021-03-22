@@ -13,10 +13,32 @@
     <section class="main">
       <button id="show-popup-form" class="btn btn-main">Click me!</button>
       <!-- Display success message below -->
+      <span id="successMessage" style="display: none; font-family:'Lobster', cursive;font-size:42px;">Thank you!</span>
+      <div class="popup">
+        <button id="closebtn">x</button>
+        <h1>login</h1>
+        <form id="form" onsubmit="submitBehaviour()" action="javascript:void(0)">
+          <label>
+            <input type="email" name="email" id="email" placeholder="Email" onkeyup="validateEmail()" required>
+            <span id="email_message"></span>
+          </label>
+          
+          <label>
+            <input type="password" name="password" id="password" placeholder="Password" onkeyup="validatePassword()" required>
+            <span id="password_message"></span>
+          </label>
+          
+          <label>
+            <input type="checkbox" name="terms" required>
+            I accept terms & conditions
+          </label>
+          
+          <input type="submit" id="submit" disabled value="SUBMIT">
+
+        </form>
+      </div>
     </section>
-    <div class="popup">
-      <!-- Here goes your popup form HTML code -->
-    </div>
+    
     <script src="js/index.min.js" charset="utf-8"></script>
   </body>
 </html>
